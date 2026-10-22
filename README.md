@@ -1,248 +1,75 @@
-# \# Atelier — Art Exploration \& AI Curator
 
-# 
+# 🎨 Atelier
+### Art Exploration & AI Curator
 
-# \*\*Atelier\*\* is an art exploration application designed to help users discover, explore, and appreciate artworks from museum collections through an interactive interface and AI-assisted art information.
+Discover, explore, and appreciate artworks with Atelier — a mobile application that combines museum collections, personal favorites, and AI-assisted art information.
 
-# 
+## ✨ Features
 
-# The application combines artwork discovery, personal collections, favorites, and an AI-powered art assistant in one place.
+- 🖼️ **Explore Artworks** — Discover artworks from museum collections.
+- 🤖 **AI Art Curator** — Learn about artists, artwork history, and painting techniques.
+- 🌐 **Translation** — Translate artwork descriptions into Indonesian.
+- ❤️ **Favorites** — Save your favorite artworks.
+- 📚 **Personal Collection** — Organize and revisit collected works.
+- 📱 **Mobile App** — Built with Ionic Vue and Capacitor.
 
-# 
+## 🛠️ Tech Stack
 
-# \## ✨ Features
+- Vue 3
+- TypeScript
+- Ionic Framework
+- Capacitor
+- Vite
+- Node.js
+- Gradle
 
-# 
+## 🚀 Getting Started
 
-# \- 🖼️ \*\*Explore Artworks\*\* — Discover artworks and browse art collections.
+### Prerequisites
 
-# \- 🤖 \*\*AI Art Curator\*\* — Ask questions about artworks, artists, art history, and painting techniques.
+- Node.js and npm
+- Git
+- Android Studio (for Android development)
 
-# \- 🌐 \*\*Translation Support\*\* — Translate artwork descriptions into Indonesian.
+### Installation
 
-# \- ❤️ \*\*Favorites\*\* — Save favorite artworks for easier access.
+```bash
+git clone https://github.com/askaasky/ATELIER-Mobile-Programming.git
+cd ATELIER-Mobile-Programming
+npm install
+npm run dev
+```
 
-# \- 📚 \*\*Personal Collection\*\* — Organize and revisit collected artworks.
+## 📱 Android Development
 
-# \- 🔎 \*\*Artwork Details\*\* — Explore information such as artist, creation date, medium, and museum collection when available.
+```bash
+npm run build
+npx cap sync android
+npx cap open android
+```
 
-# \- 📱 \*\*Mobile Application\*\* — Built with Ionic Vue and Capacitor for a mobile-oriented experience.
+## 🔐 Environment Variables
 
-# 
+- Keep API keys and credentials private.
+- Never commit `.env` files or signing credentials.
+- Do not expose private API keys in frontend code.
 
-# \## 🛠️ Tech Stack
+## 📂 Project Structure
 
-# 
+```text
+android/    Native Android project
+assets/     Application assets
+public/     Static files
+server/     Server-side functionality
+src/        Application source code
+```
 
-# \- \*\*Vue 3\*\* — User interface framework
+## 🎓 Project Information
 
-# \- \*\*TypeScript\*\* — Type-safe development
+- **Project:** Atelier
+- **Category:** Art Exploration & Mobile Application
+- **Purpose:** Mobile Programming project
 
-# \- \*\*Ionic\*\* — Mobile-friendly UI framework
+## 📄 License
 
-# \- \*\*Capacitor\*\* — Native mobile application integration
-
-# \- \*\*Vite\*\* — Development server and build tooling
-
-# \- \*\*Node.js\*\* — Backend runtime for server-side functionality
-
-# \- \*\*Gradle\*\* — Android build system
-
-# 
-
-# \## 🚀 Getting Started
-
-# 
-
-# \### Prerequisites
-
-# 
-
-# Make sure you have installed:
-
-# 
-
-# \- \[Node.js](https://nodejs.org/)
-
-# \- npm
-
-# \- \[Git](https://git-scm.com/)
-
-# \- \[Android Studio](https://developer.android.com/studio) (for Android development)
-
-# 
-
-# \### Installation
-
-# 
-
-# 1\. Clone the repository:
-
-# 
-
-# &#x20;  ```bash
-
-# &#x20;  git clone https://github.com/askaasky/ATELIER-Mobile-Programming.git
-
-# &#x20;  ```
-
-# 
-
-# 2\. Enter the project directory:
-
-# 
-
-# &#x20;  ```bash
-
-# &#x20;  cd ATELIER-Mobile-Programming
-
-# &#x20;  ```
-
-# 
-
-# 3\. Install dependencies:
-
-# 
-
-# &#x20;  ```bash
-
-# &#x20;  npm install
-
-# &#x20;  ```
-
-# 
-
-# 4\. Start the development server:
-
-# 
-
-# &#x20;  ```bash
-
-# &#x20;  npm run dev
-
-# &#x20;  ```
-
-# 
-
-# 5\. Open the local URL shown in your terminal.
-
-# 
-
-# \## 📱 Android Development
-
-# 
-
-# To build and synchronize the web application with the Android project, run:
-
-# 
-
-# ```bash
-
-# npm run build
-
-# npx cap sync android
-
-# npx cap open android
-
-# ```
-
-# 
-
-# Android Studio will open the native Android project, where you can configure, run, and build the application.
-
-# 
-
-# > Make sure Android Studio and the required Android SDK components are installed.
-
-# 
-
-# \## 🔐 Environment Variables
-
-# 
-
-# Some functionality may require API credentials.
-
-# 
-
-# \- Keep private API keys in environment variables.
-
-# \- Do not commit `.env` files, API keys, signing credentials, or other secrets.
-
-# \- Configure environment variables according to the requirements of each service.
-
-# 
-
-# \*\*Important:\*\* Any API key exposed through frontend code or bundled `VITE\_` variables should be considered public. Private API credentials should be handled by a backend service.
-
-# 
-
-# \## 📂 Project Structure
-
-# 
-
-# ```text
-
-# ATELIER-Mobile-Programming/
-
-# ├── android/          # Native Android project
-
-# ├── assets/           # Application assets
-
-# ├── public/           # Public static files
-
-# ├── server/           # Server-side functionality
-
-# ├── src/
-
-# │   ├── database/     # Database and collection services
-
-# │   ├── services/     # AI and artwork API services
-
-# │   ├── theme/        # Application styling
-
-# │   ├── types/        # TypeScript types
-
-# │   ├── views/        # Application pages
-
-# │   ├── router/       # Application routing
-
-# │   ├── App.vue       # Root Vue component
-
-# │   └── main.ts       # Application entry point
-
-# ├── capacitor.config.ts
-
-# ├── package.json
-
-# └── README.md
-
-# ```
-
-# 
-
-# \## 🎓 Project Information
-
-# 
-
-# \*\*Project Name:\*\* Atelier  
-
-# \*\*Project Type:\*\* Mobile Application  
-
-# \*\*Category:\*\* Art Exploration \& AI-Assisted Learning  
-
-# \*\*Repository:\*\* \[ATELIER-Mobile-Programming](https://github.com/askaasky/ATELIER-Mobile-Programming)
-
-# 
-
-# Developed as a Mobile Programming project.
-
-# 
-
-# \## 📄 License
-
-# 
-
-# No license has been specified yet. All rights are reserved by the respective copyright holders unless a license is added to this repository.
-
-
-
+No license has been specified yet.
