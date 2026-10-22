@@ -1,2 +1,72 @@
-/* For information on how to create your own theme, please refer to:
-http://ionicframework.com/docs/theming/ */
+:root {
+  /* === DARK NAVY PALETTE === */
+  --bg-primary:    #151f2e;        /* latar utama (paling gelap) */
+  --bg-surface:    #1a2636;        /* card / surface layer */
+  --bg-elevated:   #1f2e40;        /* elemen terangkat (modal, input) */
+  --bg-hover:      #253347;        /* hover state */
+
+  /* === TEXT === */
+  --text-primary:  #e8e4dc;        /* teks utama (warm off-white) */
+  --text-secondary:#8fa8bc;        /* teks sekunder (muted blue-grey) */
+  --text-muted:    #5a7490;        /* teks redup */
+  --text-on-dark:  #ffffff;        /* teks di atas elemen gelap */
+
+  /* === ACCENT === */
+  --accent:        #6b9ab8;        /* biru-slate utama */
+  --accent-hover:  #80b2d0;
+  --accent-warm:   #c8a97e;        /* aksen warm gold untuk seni */
+
+  /* === BORDER & DIVIDER === */
+  --border:        rgba(255,255,255,0.08);
+  --border-strong: rgba(255,255,255,0.14);
+
+  /* === IONIC GLOBAL OVERRIDES === */
+  --ion-background-color: #151f2e;
+  --ion-text-color: #e8e4dc;
+  --ion-toolbar-background: #151f2e;
+  --ion-tab-bar-background: #151f2e;
+  --ion-card-background: #1a2636;
+  --ion-item-background: #151f2e;
+
+  /* === LEGACY (dipertahankan agar tidak rusak) === */
+  --atelier-black:      #151f2e;
+  --atelier-white:      #e8e4dc;
+  --atelier-gray:       #5a7490;
+  --atelier-light-gray: #1a2636;
+  --atelier-border:     rgba(255,255,255,0.08);
+
+  --atelier-font-serif: Georgia, 'Times New Roman', serif;
+  --atelier-font-sans: 'Inter', Arial, Helvetica, sans-serif;
+}
+
+/* Global background override for body, html, and all Ionic wrappers */
+html,
+body {
+  background: #151f2e !important;
+  background-color: #151f2e !important;
+  color: #e8e4dc;
+}
+
+ion-app {
+  background: #151f2e !important;
+  --ion-background-color: #151f2e;
+}
+
+ion-page {
+  background: #151f2e !important;
+  --background: #151f2e;
+  --ion-background-color: #151f2e;
+}
+
+ion-content {
+  --background: #151f2e;
+  --ion-background-color: #151f2e;
+}
+
+ion-content::part(background) {
+  background: #151f2e !important;
+}
+
+ion-content::part(scroll) {
+  background: #151f2e !important;
+}

@@ -34,10 +34,13 @@ import '@ionic/vue/css/palettes/dark.system.css';
 /* Theme variables */
 import './theme/variables.css';
 
+import { initDatabase } from './database/database';
+
 const app = createApp(App)
   .use(IonicVue)
   .use(router);
 
-router.isReady().then(() => {
+router.isReady().then(async () => {
+  await initDatabase().catch(err => console.warn('Database initialization warning:', err));
   app.mount('#app');
 });

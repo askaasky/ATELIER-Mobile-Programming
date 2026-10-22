@@ -1,0 +1,263 @@
+/* Force Ionic dark background */
+ion-page:has(.favorite-page),
+ion-content:has(.favorite-page) {
+  color-scheme: dark;
+  --ion-background-color: #151f2e;
+  --ion-text-color: #e8e4dc;
+  --background: #151f2e;
+}
+
+.favorite-page {
+  min-height: 100vh;
+  padding: 40px 7% 120px;
+  background: #151f2e;
+  color: #e8e4dc;
+}
+
+/* Header */
+.favorite-header {
+  margin-bottom: 35px;
+}
+
+.page-label {
+  margin: 0 0 8px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #5a7490;
+}
+
+.favorite-header h1 {
+  margin: 0;
+  font-family: Georgia, serif;
+  font-size: 46px;
+  font-weight: 500;
+}
+
+.header-description {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #8fa8bc;
+}
+
+/* Feed */
+.favorite-feed {
+  width: min(700px, 100%);
+  margin: 0 auto;
+}
+
+.favorite-card {
+  padding: 0 0 30px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+/* Image */
+.favorite-image {
+  width: 100%;
+  max-height: 560px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #1a2636;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.favorite-image img {
+  width: 100%;
+  max-height: 560px;
+  display: block;
+  object-fit: contain;
+}
+
+/* Info */
+.favorite-info {
+  padding: 15px 3px 0;
+}
+
+.favorite-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.favorite-info h2 {
+  margin: 0;
+  font-family: Georgia, serif;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.artist {
+  margin: 5px 0 0;
+  font-size: 13px;
+  color: #8fa8bc;
+}
+
+/* Like */
+.like-button {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  color: #5a7490;
+  font-size: 25px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.like-button:hover {
+  background: #253347;
+  transform: scale(1.08);
+}
+
+.like-button.liked {
+  color: #d94b4b;
+}
+
+/* Meta */
+.artwork-meta {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+  font-size: 11px;
+  color: #5a7490;
+}
+
+.artwork-meta span + span::before {
+  content: '•';
+  margin-right: 15px;
+}
+
+/* Empty */
+.empty-state {
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.empty-icon {
+  font-size: 50px;
+  color: #aaa;
+}
+
+.empty-state h2 {
+  margin: 15px 0 8px;
+  font-family: Georgia, serif;
+  font-size: 27px;
+  font-weight: 500;
+}
+
+.empty-state p {
+  max-width: 350px;
+  margin: auto;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #8fa8bc;
+}
+
+/* Bottom nav */
+.bottom-nav {
+  position: fixed;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+  width: min(520px, 90%);
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: rgba(21,31,46,0.92);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 20px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(20px);
+  z-index: 100;
+}
+
+.nav-item {
+  border: none;
+  background: transparent;
+  padding: 8px;
+  border-radius: 14px;
+  color: #5a7490;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  font-size: 10px;
+}
+
+.nav-icon {
+  font-size: 21px;
+  line-height: 1;
+}
+
+.nav-item.active {
+  background: #253347;
+  color: #e8e4dc;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+
+  .favorite-page {
+    padding-top: max(24px, env(safe-area-inset-top, 24px));
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: calc(110px + env(safe-area-inset-bottom, 0px));
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .favorite-header h1 {
+    font-size: 32px;
+  }
+
+  .favorite-feed {
+    width: 100%;
+    gap: 24px;
+  }
+
+  .favorite-card {
+    border-radius: 20px;
+    transition: transform 0.15s ease;
+  }
+
+  .favorite-card:active {
+    transform: scale(0.98);
+  }
+
+  .favorite-image {
+    max-height: 420px;
+    border-radius: 16px;
+  }
+
+  .favorite-image img {
+    max-height: 420px;
+  }
+
+  .favorite-info h2 {
+    font-size: 19px;
+    font-weight: 600;
+  }
+
+  .like-button {
+    width: 44px;
+    height: 44px;
+    font-size: 24px;
+    border-radius: 50%;
+  }
+
+  .like-button:active {
+    transform: scale(1.2);
+  }
+
+  .bottom-nav {
+    bottom: max(14px, calc(10px + env(safe-area-inset-bottom, 0px)));
+    width: min(480px, calc(100% - 24px));
+  }
+}

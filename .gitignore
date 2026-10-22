@@ -30,3 +30,24 @@ npm-debug.log*
 /platforms
 /plugins
 /www
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Android signing credentials
+*.jks
+*.keystore
+key.properties
+
+# Android build outputs
+/android/.gradle/
+/android/local.properties
+/android/**/build/
+/android/app/release/
+/android/app/debug/
+
+# Build artifacts
+*.aab
+*.apk
